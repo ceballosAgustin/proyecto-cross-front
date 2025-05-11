@@ -90,27 +90,27 @@ export const categoriaEjercicioService = {
 
 export const nivelDificultadService = {
     getAll: async (): Promise<NivelDificultad[]> => {
-        const response = await api.get('/niveles-dificultad')
+        const response = await api.get('/niveles')
         return response.data
     },
 
     getById: async (id: number): Promise<NivelDificultad> => {
-        const response = await api.get(`/niveles-dificultad/${id}`)
+        const response = await api.get(`/niveles/${id}`)
         return response.data
     },
 
     post: async (nivelDificultad: NivelDificultad): Promise<NivelDificultad> => {
-        const response = await api.post('/niveles-dificultad', nivelDificultad) 
+        const response = await api.post('/niveles', nivelDificultad) 
         return response.data
     },
 
     put: async (nivelDificultad: NivelDificultad): Promise<NivelDificultad> => {
-        const response = await api.put(`/niveles-dificultad/${nivelDificultad.idNivel}`, nivelDificultad)
+        const response = await api.put(`/niveles/${nivelDificultad.idNivel}`, nivelDificultad)
         return response.data
     },
 
     delete: async (id: number): Promise<void> => {
-        await api.delete(`/niveles-dificultad/${id}`)
+        await api.delete(`/niveles/${id}`)
     }
 }
 
