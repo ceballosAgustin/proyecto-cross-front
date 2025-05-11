@@ -5,7 +5,7 @@ interface ListaEjerciciosProps {
     ejercicios: Ejercicio[]
 }
 
-export const ExerciseList = ({ ejercicios }: ListaEjerciciosProps) => {
+export const ListaEjercicios = ({ ejercicios }: ListaEjerciciosProps) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ejercicios.map((ejercicio) => (
@@ -17,4 +17,4 @@ export const ExerciseList = ({ ejercicios }: ListaEjerciciosProps) => {
     )
 }
 
-export default ExerciseList
+export default ListaEjercicios
